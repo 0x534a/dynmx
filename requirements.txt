@@ -1,0 +1,6 @@
+anytree==2.7.2
+lxml==4.4.2
+pyparsing==2.4.5
+PyYAML==5.2
+six==1.13.0
+stringcase==1.2.0
