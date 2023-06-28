@@ -71,7 +71,7 @@ class OutputHelper:
         print("[+] Loaded {} dynmx signature(s)".format(num_of_signatures))
         if resources_needed:
             print("[+] Extracting resources from function log(s)")
-        print("[+] Starting detection process with {} workers. This probably takes some time...".format(num_of_workers))
+        print("[+] Starting detection process with {} worker(s). This probably takes some time...".format(num_of_workers))
 
     def render_flog_info(self, number_of_function_logs: int, command: str) -> None:
         """
