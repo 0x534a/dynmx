@@ -175,6 +175,8 @@ def handle_detect_command(input_files: List[str], signature_files: List[str], pa
     input_file_count = len(in_files)
     LOGGER.info("Found {} function logs to parse".format(input_file_count))
     # Multiprocessing
+    if input_file_count < MultiprocessingHelper.get_cpu_count():
+        num_of_workers = input_file_count
     num_of_processes, proc_pool = MultiprocessingHelper.get_pool(
         num_of_workers=num_of_workers,
         log_level=log_level,
@@ -412,6 +414,8 @@ def handle_convert_command(input_files: List[str], parser_lib: ParserLibrary, ou
     input_file_count = len(in_files)
     LOGGER.info("Found {} function logs to parse".format(input_file_count))
     # Multiprocessing
+    if input_file_count < MultiprocessingHelper.get_cpu_count():
+        num_of_workers = input_file_count
     num_of_processes, proc_pool = MultiprocessingHelper.get_pool(
         num_of_workers=num_of_workers,
         log_level=log_level,

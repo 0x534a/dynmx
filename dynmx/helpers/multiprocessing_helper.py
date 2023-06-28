@@ -45,3 +45,11 @@ class MultiprocessingHelper:
             initargs=(log_level, queue)
         )
         return num_of_workers, proc_pool
+
+    @staticmethod
+    def get_cpu_count() -> int:
+        """
+        Returns the CPU count
+        :return: CPU count
+        """
+        return cpu_count()
